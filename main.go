@@ -11,11 +11,13 @@ import (
 // PsqlConn is a connection string
 var PsqlConn string = "host=localhost port=5432 user=declabs dbname=gorm_example password=1q2w3e"
 
+// Application main function
 func main() {
-	fmt.Println("Go ORM Turorial...")
+	fmt.Println("GORM Example...")
 
 	// InitialMigration()
 
+	// Create routes and initialize HTTP listener
 	handleRequest()
 }
 
@@ -39,5 +41,5 @@ func handleRequest() {
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Go-ORM Turorial...")
+	fmt.Fprintf(w, "GORM Example...")
 }
